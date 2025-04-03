@@ -67,7 +67,7 @@ def main(input_file, output_file, graph_file):
 # Main code
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        input_file = open('./eva-data.json', 'r', encoding='utf-8')
+        input_file = open('./data/eva-data.json', 'r', encoding='utf-8')
         output_file = open('./eva-data.csv', 'w', encoding='utf-8')
     else:
         input_file = sys.argv[1]
