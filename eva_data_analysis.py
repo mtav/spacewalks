@@ -33,24 +33,61 @@ def write_dataframe_to_csv(df, output_file):
     # Save dataframe to CSV file for later analysis
     df.to_csv(output_file, index=False)
 
-def plot_cumulative_time_in_space(df, graph_file):
-    # add extra columns used for plotting
-    df = add_duration_hours_variable(df)
+def add_duration_hours_variable(df):
+    """
+    Add duration in hours (duration_hours) variable to the dataset
 
+    Args:
+        df (pd.DataFrame): The input dataframe.
+
+    Returns:
+        df_copy (pd.DataFrame): A copy of df_ with the new duration_hours variable added
+    """
+    df_copy = df.copy()
+    df_copy["duration_hours"] = df_copy["duration"].apply(
+        text_to_duration
+    )
+    return df_copy
+
+def text_to_duration(duration):
+    """
+    Convert a text format duration "HH:MM" to duration in hours
+
+    Args:
+        duration (str): The text format duration
+
+    Returns:
+        duration_hours (float): The duration in hours
+    """
+    hours, minutes = duration.split(":")
+    duration_hours = int(hours) + int(minutes)/6
+    return duration_hours
+
+def plot_cumulative_time_in_space(df, graph_file):
+    """
+    Plot the cumulative time spent in space over years
+
+    Convert the duration column from strings to number of hours
+    Calculate cumulative sum of durations
+    Generate a plot of cumulative time spent in space over years and
+    save it to the specified location
+
+    Args:
+        df (pd.DataFrame): The input dataframe.
+        graph_file (str): The path to the output graph file.
+
+    Returns:
+        None
+    """
     print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    # Plot cumulative time spent in space over years
-    plt.plot(df['date'], df['cumulative_time'], 'ko-')
+    df = add_duration_hours_variable(df)
+    df['cumulative_time'] = df['duration_hours'].cumsum()
+    plt.plot(df.date, df.cumulative_time, 'ko-')
     plt.xlabel('Year')
     plt.ylabel('Total time spent in space to date (hours)')
     plt.tight_layout()
     plt.savefig(graph_file)
     plt.show()
-
-def add_duration_hours_variable(df):
-    df_copy = df.copy()
-    df_copy['duration_hours'] = df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-    df_copy['cumulative_time'] = df_copy['duration_hours'].cumsum()
-    return df_copy
 
 def main(input_file, output_file, graph_file):
     print("--START--")
