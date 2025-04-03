@@ -10,5 +10,5 @@ python3 eva_data_analysis.py
 # Run unit tests
 To run all unit tests:
 ```
-python -m pytest --cov --cov-report=html
+python3 -m pytest --cov --cov-report=html
 ```
