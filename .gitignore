@@ -3,3 +3,5 @@ venv_spacewalks/
 # ignore generated output
 *.png
 *.csv
+# ignore compiled python files
+*.pyc
