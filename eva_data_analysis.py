@@ -1,5 +1,6 @@
 # import statements
 import csv
+import json
 import datetime as dt
 import matplotlib.pyplot as plt
 
@@ -11,7 +12,6 @@ graph_file = 'myplot.png'
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
 data=[]
-import json
 
 for i in range(374):
     line=input_file.readline()
