@@ -34,7 +34,7 @@ installed. You will also need the following libraries (minimum versions in brack
 
 You can install all required modules using this command from the root directory of the repository:
 ```
-python3 -m pip install -f requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 # A simple usage example
@@ -59,4 +59,19 @@ Install [howfairis](https://github.com/fair-software/howfairis):
 Then run:
 ```
 howfairis https://github.com/mtav/spacewalks
+```
+
+## requirements.txt update
+```
+python3 -m pip freeze > requirements.txt
+```
+
+## Documentation build
+```
+mkdocs build
+```
+
+## Documentation deployment
+```
+mkdocs gh-deploy
 ```
