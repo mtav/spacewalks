@@ -1,7 +1,13 @@
 # Spacewalks
 
 Example code used for the [Software tools and practices for open and reproducible research
-workshop](https://carpentries-incubator.github.io/fair-research-software/).
+workshop](https://carpentries-incubator.github.io/fair-research-software/), organised by the [Software Sustainability Institute](https://www.software.ac.uk/) and funded by [UK Reproducibility Network (UKRN)](https://www.ukrn.org/).
+
+* Course material (including prerequisite knowledge,  target audience and learning objectives): https://carpentries-incubator.github.io/fair-research-software/.
+
+* Workshop website with the all the details and tentative schedule is at: https://softwaresaved.github.io/2025-04-01-good-software-practices/.
+
+* Setup instructions are at https://carpentries-incubator.github.io/fair-research-software/#setup.
 
 ## Overview
 Spacewalks is a Python analysis tool for researchers to generate visualisations and statistical summaries of NASA's extravehicular activity datasets.
