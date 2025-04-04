@@ -1,3 +1,5 @@
+[![DOI](https://sandbox.zenodo.org/badge/959124626.svg)](https://handle.stage.datacite.org/10.5072/zenodo.194393)
+
 # Spacewalks
 
 Example code used for the [Software tools and practices for open and reproducible research
