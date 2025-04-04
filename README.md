@@ -32,8 +32,11 @@ installed. You will also need the following libraries (minimum versions in brack
 - [pytest](https://docs.pytest.org/en/8.2.x/#) >=8.2.0  - Spacewalks uses pytest for testing
 - [pandas](https://pandas.pydata.org/) >= 2.2.0 - Spacewalks uses pandas for data frame manipulation
 
+You can install all required modules using this command from the root directory of the repository:
+```
+python3 -m pip install -f requirements.txt
+```
 
-# Installation instructions
 # A simple usage example
 To regenerate the results and figures, run **eva_data_analysis.py** using python3:
 ```
@@ -50,4 +53,10 @@ python3 eva_data_analysis.py INFILE OUTFILE
 To run all unit tests:
 ```
 python3 -m pytest --cov --cov-report=html
+```
+## Test repository fairness
+Install [howfairis](https://github.com/fair-software/howfairis):
+Then run:
+```
+howfairis https://github.com/mtav/spacewalks
 ```
