@@ -26,6 +26,6 @@ keywords:
   - NASA
   - EVA
 license: GPL-3.0
-commit: b33fdbbe897ec2e907ff70874ea587c33fd44955
-version: first-release
+commit: 3764a7ccd76cbc6d36bc92e6cb9b50a60dbd7f3d
+version: 1.0
 date-released: '2025-04-04'
