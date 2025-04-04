@@ -1,0 +1,31 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - orcid: 'https://orcid.org/0000-0003-0521-8327'
+    given-names: Mike
+    family-names: Taverne
+    email: mike.taverne@northumbria.ac.uk
+    affiliation: Northumbria University
+repository-code: 'https://github.com/mtav/spacewalks'
+abstract: >-
+  Example code used for the Software tools and practices for
+  open and reproducible research workshop, organised by the
+  Software Sustainability Institute and funded by UK
+  Reproducibility Network (UKRN), 1-4 April 2025.
+keywords:
+  - FAIR
+  - UKRN
+  - SSI
+  - NASA
+  - EVA
+license: GPL-3.0
+commit: f18f2c5717577b29d707790b84f36832be57a73c
+version: first-release
+date-released: '2025-04-04'
