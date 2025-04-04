@@ -1,6 +1,6 @@
-[![DOI](https://sandbox.zenodo.org/badge/959124626.svg)](https://handle.stage.datacite.org/10.5072/zenodo.194393)
-
 # Spacewalks
+
+[![DOI](https://sandbox.zenodo.org/badge/959124626.svg)](https://handle.stage.datacite.org/10.5072/zenodo.194393)
 
 Example code used for the [Software tools and practices for open and reproducible research
 workshop](https://carpentries-incubator.github.io/fair-research-software/), organised by the [Software Sustainability Institute](https://www.software.ac.uk/) and funded by [UK Reproducibility Network (UKRN)](https://www.ukrn.org/), 1-4 April 2025.
