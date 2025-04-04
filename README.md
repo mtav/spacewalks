@@ -37,6 +37,13 @@ You can install all required modules using this command from the root directory 
 python3 -m pip install -r requirements.txt
 ```
 
+# Installation instructions
+```
+unset PYTHONPATH PYTHONSTARTUP
+python3 -m venv ./venv_spacewalks
+python3 -m pip install -r requirements.txt
+```
+
 # A simple usage example
 To regenerate the results and figures, run **eva_data_analysis.py** using python3:
 ```
@@ -55,8 +62,9 @@ To run all unit tests:
 python3 -m pytest --cov --cov-report=html
 ```
 ## Test repository fairness
-Install [howfairis](https://github.com/fair-software/howfairis):
-Then run:
+1. Install [howfairis](https://github.com/fair-software/howfairis).
+
+1. Then run:
 ```
 howfairis https://github.com/mtav/spacewalks
 ```
