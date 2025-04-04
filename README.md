@@ -1,7 +1,7 @@
 # Spacewalks
 
 Example code used for the [Software tools and practices for open and reproducible research
-workshop](https://carpentries-incubator.github.io/fair-research-software/), organised by the [Software Sustainability Institute](https://www.software.ac.uk/) and funded by [UK Reproducibility Network (UKRN)](https://www.ukrn.org/).
+workshop](https://carpentries-incubator.github.io/fair-research-software/), organised by the [Software Sustainability Institute](https://www.software.ac.uk/) and funded by [UK Reproducibility Network (UKRN)](https://www.ukrn.org/), 1-4 April 2025.
 
 * Course material (including prerequisite knowledge,  target audience and learning objectives): https://carpentries-incubator.github.io/fair-research-software/.
 
