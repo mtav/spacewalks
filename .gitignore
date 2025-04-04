@@ -1,5 +1,7 @@
-# virtual environment
+# virtual environments
 venv_spacewalks/
+venv*/
+
 # ignore generated output
 *.png
 *.csv
