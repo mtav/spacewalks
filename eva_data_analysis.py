@@ -97,7 +97,7 @@ def main(input_file, output_file, graph_file):
     print(f'Reading JSON file {input_file}')
     eva_data = read_json_to_dataframe(input_file)
 
-    # added this line: Add crew size column.
+    # Add crew size column.
     eva_data = add_crew_size_column(eva_data)
 
     # Convert and export data to CSV file
