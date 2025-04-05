@@ -43,7 +43,6 @@ Notice how the output to the command line clearly indicates that we are using a 
 ```output
 Using custom input and output filenames
 Reading JSON file data/eva-data.json
-Saving to CSV file data/clean/eva-data-clean.csv
 Adding crew size variable (crew_size) to dataset
 Saving to CSV file data/clean/eva-data-clean.csv
 Plotting cumulative spacewalk duration and saving to results/cumulative_eva_graph.png

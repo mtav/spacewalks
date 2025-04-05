@@ -91,8 +91,6 @@ def plot_cumulative_time_in_space(df, graph_file):
     plt.show()
 
 def main(input_file, output_file, graph_file):
-    print("--START--")
-
     # Read the data from JSON file
     print(f'Reading JSON file {input_file}')
     eva_data = read_json_to_dataframe(input_file)
@@ -105,8 +103,6 @@ def main(input_file, output_file, graph_file):
 
     # Plot data
     plot_cumulative_time_in_space(eva_data, graph_file)
-
-    print("--END--")
 
 def calculate_crew_size(crew):
     """
@@ -141,13 +137,16 @@ def add_crew_size_column(df):
     return df_copy
 
 # Main code
-if __name__ == '__main__':
+if __name__ == "__main__":
+
     if len(sys.argv) < 3:
-        input_file = open('./data/eva-data.json', 'r', encoding='utf-8')
-        output_file = open('./eva-data.csv', 'w', encoding='utf-8')
+        input_file = 'data/eva-data.json'
+        output_file = 'results/eva-data.csv'
+        print(f'Using default input and output filenames')
     else:
         input_file = sys.argv[1]
         output_file = sys.argv[2]
+        print('Using custom input and output filenames')
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = 'results/cumulative_eva_graph.png'
     main(input_file, output_file, graph_file)
