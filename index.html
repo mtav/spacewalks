@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#spacewalks" class="md-skip">
           Skip to content
         </a>
       
@@ -198,18 +198,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites
     </span>
   </a>
   
@@ -311,6 +320,28 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/mtav/spacewalks" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -338,18 +369,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-requisites
     </span>
   </a>
   
@@ -371,20 +411,89 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="spacewalks">Spacewalks</h1>
+<p><a href="https://handle.stage.datacite.org/10.5072/zenodo.194393"><img alt="DOI" src="https://sandbox.zenodo.org/badge/959124626.svg" /></a></p>
+<p>Example code used for the <a href="https://carpentries-incubator.github.io/fair-research-software/">Software tools and practices for open and reproducible research
+workshop</a>, organised by the <a href="https://www.software.ac.uk/">Software Sustainability Institute</a> and funded by <a href="https://www.ukrn.org/">UK Reproducibility Network (UKRN)</a>, 1-4 April 2025.</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>
+<p>Course material (including prerequisite knowledge,  target audience and learning objectives): https://carpentries-incubator.github.io/fair-research-software/.</p>
+</li>
+<li>
+<p>Workshop website with the all the details and tentative schedule is at: https://softwaresaved.github.io/2025-04-01-good-software-practices/.</p>
+</li>
+<li>
+<p>Setup instructions are at https://carpentries-incubator.github.io/fair-research-software/#setup.</p>
+</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h2 id="overview">Overview</h2>
+<p>Spacewalks is a Python analysis tool for researchers to generate visualisations and statistical summaries of NASA's extravehicular activity datasets.</p>
+<p><img alt="Cumulative EVA graph" src="results/cumulative_eva_graph.png" /></p>
+<h2 id="features">Features</h2>
+<p>Key features of Spacewalks:</p>
+<ul>
+<li>Generates a CSV table of summary statistics of extravehicular activity crew sizes.</li>
+<li>Generates a line plot to show the cumulative duration of spacewalks over time.</li>
+</ul>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>Spacewalks was developed using Python version 3.12</p>
+<p>To install and run Spacewalks you will need have Python &gt;=3.12
+installed. You will also need the following libraries (minimum versions in brackets)</p>
+<ul>
+<li><a href="https://www.numpy.org/">NumPy</a> &gt;=2.0.0 - Spacewalk's test suite uses NumPy's statistical functions</li>
+<li><a href="https://matplotlib.org/stable/index.html">Matplotlib</a> &gt;=3.0.0  - Spacewalks uses Matplotlib to make plots</li>
+<li><a href="https://docs.pytest.org/en/8.2.x/#">pytest</a> &gt;=8.2.0  - Spacewalks uses pytest for testing</li>
+<li><a href="https://pandas.pydata.org/">pandas</a> &gt;= 2.2.0 - Spacewalks uses pandas for data frame manipulation</li>
+</ul>
+<p>You can install all required modules using this command from the root directory of the repository:</p>
+<pre><code>python3 -m pip install -r requirements.txt
+</code></pre>
+<h1 id="installation-instructions">Installation instructions</h1>
+<pre><code>unset PYTHONPATH PYTHONSTARTUP
+python3 -m venv ./venv_spacewalks
+python3 -m pip install -r requirements.txt
+</code></pre>
+<h2 id="activate-the-created-python-environment">Activate the created python environment</h2>
+<p>Before running the main script or testing script, make sure to activate the created virtual environment:
+* On GNU/Linux:</p>
+<pre><code>source ./venv_spacewalks/bin/activate
+</code></pre>
+<ul>
+<li>On Windows:</li>
+</ul>
+<pre><code>source ./venv_spacewalks/Scripts/activate
+</code></pre>
+<h1 id="a-simple-usage-example">A simple usage example</h1>
+<p>To regenerate the results and figures, run <strong>eva_data_analysis.py</strong> using python3:</p>
+<pre><code>python3 eva_data_analysis.py
+</code></pre>
+<p>To specify the input JSON (<em>INFILE</em>) and output CSV file (<em>OUTFILE</em>):</p>
+<pre><code>python3 eva_data_analysis.py INFILE OUTFILE
+</code></pre>
+<h1 id="for-contributorsdevelopers">For contributors/developers</h1>
+<h2 id="run-unit-tests">Run unit tests</h2>
+<p>To run all unit tests:</p>
+<pre><code>python3 -m pytest --cov --cov-report=html
+</code></pre>
+<h2 id="test-repository-fairness">Test repository fairness</h2>
+<ol>
+<li>
+<p>Install <a href="https://github.com/fair-software/howfairis">howfairis</a>.</p>
+</li>
+<li>
+<p>Then run:</p>
+</li>
+</ol>
+<pre><code>howfairis https://github.com/mtav/spacewalks
+</code></pre>
+<h2 id="requirementstxt-update">requirements.txt update</h2>
+<pre><code>python3 -m pip freeze &gt; requirements.txt
+</code></pre>
+<h2 id="documentation-build">Documentation build</h2>
+<pre><code>mkdocs build
+</code></pre>
+<h2 id="documentation-deployment">Documentation deployment</h2>
+<pre><code>mkdocs gh-deploy
 </code></pre>
 
 
