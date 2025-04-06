@@ -44,7 +44,19 @@ python3 -m venv ./venv_spacewalks
 python3 -m pip install -r requirements.txt
 ```
 
+## Activate the created python environment
+Before running the main script or testing script, make sure to activate the created virtual environment:
+* On GNU/Linux:
+```
+source ./venv_spacewalks/bin/activate
+```
+* On Windows:
+```
+source ./venv_spacewalks/Scripts/activate
+```
+
 # A simple usage example
+
 To regenerate the results and figures, run **eva_data_analysis.py** using python3:
 ```
 python3 eva_data_analysis.py
