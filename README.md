@@ -14,6 +14,8 @@ workshop](https://carpentries-incubator.github.io/fair-research-software/), orga
 ## Overview
 Spacewalks is a Python analysis tool for researchers to generate visualisations and statistical summaries of NASA's extravehicular activity datasets.
 
+![Cumulative EVA graph](results/cumulative_eva_graph.png)
+
 ## Features
 Key features of Spacewalks:
 
