@@ -9,5 +9,10 @@ nav:
   - How-To Guides: how-to-guides.md
   - Reference: reference.md
   - Background: explanation.md
+  - Github: https://github.com/mtav/spacewalks
 plugins:
   - mkdocstrings
+markdown_extensions:
+  - pymdownx.snippets:
+      base_path: [!relative $config_dir]
+      check_paths: true
